@@ -10,7 +10,7 @@ export default function Experience() {
   const [activeExp, setActiveExp] = useState<number>(0);
 
   return (
-    <section id="experience" className="py-24 relative bg-[#080c14] border-t border-card-border/30">
+    <section id="experience" className="py-24 relative bg-[#080c14] border-t border-card-border/30 overflow-hidden">
       <div className="glow-spotlight top-1/3 -right-40 bg-accent-teal/10" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -24,7 +24,7 @@ export default function Experience() {
 
         {/* Timeline Structure wrapped in Tracing Beam scroll-driven line */}
         <TracingBeam>
-          <div className="relative max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start pl-8 md:pl-0">
+          <div className="relative max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start px-1 sm:px-4 md:px-0">
             {/* Left Column: Interactive Years / Companies */}
             <div className="md:col-span-4 flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 scrollbar-none">
               {experienceTimeline.map((exp, idx) => {

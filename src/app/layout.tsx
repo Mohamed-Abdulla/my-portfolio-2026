@@ -59,9 +59,13 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={`${spaceGrotesk.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable} scroll-smooth`}
     >
-      <body className="bg-background text-foreground min-h-screen flex flex-col font-sans select-none antialiased">
+      <body
+        suppressHydrationWarning
+        className="bg-background text-foreground min-h-screen flex flex-col font-sans select-none antialiased"
+      >
         {children}
       </body>
     </html>
