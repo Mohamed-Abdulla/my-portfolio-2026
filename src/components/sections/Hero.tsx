@@ -8,6 +8,7 @@ import { ArrowRight, FileText, Briefcase } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SparklesCore } from "../ui/Sparkles";
 import { BackgroundBeams } from "../ui/BackgroundBeams";
+import { FlipWords } from "../ui/FlipWords";
 
 export default function Hero() {
   const containerVariants = {
@@ -100,10 +101,18 @@ export default function Hero() {
 
           <motion.h2
             variants={itemVariants}
-            className="text-xl sm:text-2xl font-semibold text-slate-300 font-display mb-6 flex items-center gap-2"
+            className="text-lg sm:text-xl font-semibold text-slate-300 font-display mb-6 flex flex-wrap items-center gap-x-1.5 gap-y-1"
           >
-            <Briefcase className="w-5 h-5 text-primary-accent" />
-            Full Stack Software Engineer
+            <Briefcase className="w-5 h-5 text-primary-accent shrink-0" />
+            <span>Building</span>
+            <FlipWords
+              words={[
+                "Distributed Systems",
+                "Event-Driven APIs",
+                "Cloud Orchestration",
+                "Flutter Mobile Apps"
+              ]}
+            />
           </motion.h2>
 
           <motion.p
