@@ -44,7 +44,7 @@ export const HeroParallax = ({ products }: { products: IProject[] }) => {
   return (
     <div
       ref={containerRef}
-      className="h-[135vh] min-h-175 sm:min-h-237.5 w-full overflow-x-hidden overflow-y-visible relative flex flex-col bg-[#080c14] z-10"
+      className="h-[110vh] sm:h-[135vh] min-h-[600px] sm:min-h-[950px] w-full overflow-x-hidden overflow-y-visible relative flex flex-col bg-[#080c14] z-10"
     >
       {/* Normal scrolling header (outside sticky, avoids vertical height conflicts) */}
       <Header />
