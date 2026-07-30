@@ -7,7 +7,7 @@ import { cn } from "../../lib/utils";
 export const CardSpotlight = ({
   children,
   radius = 350,
-  color = "rgba(0, 245, 212, 0.08)", // Glowing neon-teal radial overlay
+  color = "rgba(139, 92, 246, 0.08)", // Glowing electric-violet radial overlay
   className,
 }: {
   children: React.ReactNode;

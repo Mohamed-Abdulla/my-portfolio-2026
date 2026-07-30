@@ -3,8 +3,8 @@
 :root {
   --background: #080c14; /* Deep Obsidian Black */
   --foreground: #f8fafc; /* Ice White */
-  --primary-accent: #3b82f6; /* Electric Blue */
-  --accent-teal: #00f5d4; /* Neon Teal */
+  --primary-accent: #8b5cf6; /* Electric Violet */
+  --accent-teal: #06b6d4; /* Cyber Cyan */
   --card-bg: rgba(15, 22, 38, 0.65); /* Midnight Blue Translucent */
   --card-border: rgba(30, 41, 59, 0.5); /* Semi-transparent slate border */
   
@@ -79,13 +79,13 @@ body {
 }
 
 .glass-panel-hover:hover {
-  border-color: rgba(0, 245, 212, 0.4);
-  box-shadow: 0 0 20px rgba(0, 245, 212, 0.15);
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
   transform: translateY(-4px);
 }
 
 .text-gradient-blue-teal {
-  background: linear-gradient(135deg, #3b82f6 0%, #00f5d4 100%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
