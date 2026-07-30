@@ -63,7 +63,7 @@ export default function Hero() {
           minSize={0.4}
           maxSize={1.4}
           particleDensity={60}
-          particleColor="#00f5d4"
+          particleColor="#06b6d4"
         />
       </div>
 

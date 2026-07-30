@@ -27,7 +27,7 @@ function Word({ children, position, color, icon }: WordProps) {
       <div
         className={`px-3 py-1.5 rounded-lg border font-mono text-[10px] sm:text-xs font-bold tracking-wide whitespace-nowrap pointer-events-auto transition-all duration-300 flex items-center gap-1.5 ${
           hovered
-            ? "bg-[#00f5d4] border-[#00f5d4] text-slate-950 scale-110 shadow-lg shadow-[#00f5d4]/30"
+            ? "bg-[#06b6d4] border-[#06b6d4] text-slate-950 scale-110 shadow-lg shadow-[#06b6d4]/30"
             : "bg-[#0f1626]/90 border-[#1e293b] shadow-md shadow-black/10"
         }`}
         style={{

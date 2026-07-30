@@ -75,7 +75,7 @@ export const TracingBeam = ({
               backgroundColor: useTransform(
                 scrollYProgress,
                 [0, 1],
-                ["#3b82f6", "#00f5d4"]
+                ["#8b5cf6", "#06b6d4"]
               ),
             }}
             className="h-2 w-2 rounded-full bg-primary-accent"
@@ -116,10 +116,10 @@ export const TracingBeam = ({
               x2="0"
               y2={svgHeight}
             >
-              <stop stopColor="#3b82f6" stopOpacity="0" />
-              <stop stopColor="#3b82f6" offset="0.3" />
-              <stop stopColor="#00f5d4" offset="0.8" />
-              <stop stopColor="#00f5d4" offset="1" />
+              <stop stopColor="#8b5cf6" stopOpacity="0" />
+              <stop stopColor="#8b5cf6" offset="0.3" />
+              <stop stopColor="#06b6d4" offset="0.8" />
+              <stop stopColor="#06b6d4" offset="1" />
             </linearGradient>
           </defs>
         </svg>
