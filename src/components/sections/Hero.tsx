@@ -6,6 +6,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, FileText, Briefcase } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SparklesCore } from "../ui/Sparkles";
+import { BackgroundBeams } from "../ui/BackgroundBeams";
 
 export default function Hero() {
   const containerVariants = {
@@ -52,9 +54,24 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-[#080c14]"
     >
+      {/* Sparkles Canvas Background */}
+      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+        <SparklesCore
+          id="herosparkles"
+          background="transparent"
+          minSize={0.4}
+          maxSize={1.4}
+          particleDensity={60}
+          particleColor="#00f5d4"
+        />
+      </div>
+
+      {/* Background Beams laser lines */}
+      <BackgroundBeams />
+
       {/* Decorative Blur Background Spotlights */}
-      <div className="glow-spotlight -top-20 -left-20 bg-primary-accent/40" />
-      <div className="glow-spotlight top-1/2 -right-40 bg-accent-teal/30" />
+      <div className="glow-spotlight -top-20 -left-20 bg-primary-accent/40 z-0 pointer-events-none" />
+      <div className="glow-spotlight top-1/2 -right-40 bg-accent-teal/30 z-0 pointer-events-none" />
 
       {/* Main Grid Content */}
       <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
