@@ -113,7 +113,7 @@ const ProductCard = ({ product }: { product: IProject }) => {
     <motion.div
       whileHover={{ y: -5 }}
       key={product.title}
-      className="group h-[180px] w-[240px] sm:h-[230px] sm:w-[310px] md:h-[265px] md:w-[350px] shrink-0 relative rounded-2xl overflow-hidden glass-panel border border-card-border shadow-2xl transition-all cursor-grab active:cursor-grabbing select-none"
+      className="group h-[200px] w-[265px] sm:h-[250px] sm:w-[330px] md:h-[300px] md:w-[400px] shrink-0 relative rounded-2xl overflow-hidden glass-panel border border-card-border shadow-2xl transition-all cursor-grab active:cursor-grabbing select-none"
     >
       {/* Background radial gradient */}
       <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-secondary/5 z-0" />
