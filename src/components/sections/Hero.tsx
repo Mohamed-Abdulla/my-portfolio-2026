@@ -106,18 +106,13 @@ export default function Hero() {
             <Briefcase className="w-5 h-5 text-primary-accent shrink-0" />
             <span>Building</span>
             <FlipWords
-              words={[
-                "Distributed Systems",
-                "Event-Driven APIs",
-                "Cloud Orchestration",
-                "Flutter Mobile Apps"
-              ]}
+              words={["Distributed Systems", "Event-Driven APIs", "Cloud Orchestration", "Flutter Mobile Apps"]}
             />
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="text-slate-400 font-sans max-w-xl text-base sm:text-lg mb-8 leading-relaxed"
+            className="text-slate-400 font-sans max-w-xl text-base sm:text-md mb-8 leading-relaxed"
           >
             Specializing in high-performance distributed systems, event-driven backends (Kafka/RabbitMQ), and custom
             identity systems (Keycloak/Kong). I also design and ship production mobile platforms in Flutter and web
