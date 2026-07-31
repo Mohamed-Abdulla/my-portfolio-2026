@@ -3,8 +3,15 @@
 :root {
   --background: #080c14; /* Deep Obsidian Black */
   --foreground: #f8fafc; /* Ice White */
-  --primary-accent: #8b5cf6; /* Electric Violet */
-  --accent-teal: #06b6d4; /* Cyber Cyan */
+  
+  /* Global Brand Color Tokens */
+  --primary: #8b5cf6; /* Electric Violet */
+  --secondary: #06b6d4; /* Cyber Cyan */
+
+  /* Backward Compatibility Mapping */
+  --primary-accent: var(--primary);
+  --accent-teal: var(--secondary);
+  
   --card-bg: rgba(15, 22, 38, 0.65); /* Midnight Blue Translucent */
   --card-border: rgba(30, 41, 59, 0.5); /* Semi-transparent slate border */
   
@@ -16,6 +23,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* New Semantic variables mapped for Tailwind CSS utility use */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  
+  /* Backward-compatible variables */
   --color-primary-accent: var(--primary-accent);
   --color-accent-teal: var(--accent-teal);
   --color-card-bg: var(--card-bg);

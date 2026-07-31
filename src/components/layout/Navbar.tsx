@@ -91,7 +91,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href={isResumePage ? "/" : "#home"} className="flex items-center gap-2 group">
           <span className="text-2xl font-bold font-display text-gradient-blue-teal">⇋</span>
-          <span className="text-lg font-semibold tracking-wider font-display group-hover:text-primary-accent transition-colors">
+          <span className="text-lg font-semibold tracking-wider font-display group-hover:text-primary transition-colors">
             MOHAMED
           </span>
         </Link>
@@ -108,14 +108,14 @@ export default function Navbar() {
                       href={link.href}
                       onClick={(e) => handleLinkClick(e, link.href)}
                       className={`text-sm font-medium tracking-wide transition-colors relative py-2 ${
-                        isActive ? "text-accent-teal" : "text-slate-400 hover:text-white"
+                        isActive ? "text-secondary" : "text-slate-400 hover:text-white"
                       }`}
                     >
                       {link.name}
                       {isActive && (
                         <motion.span
                           layoutId="activeNavIndicator"
-                          className="absolute bottom-0 left-0 w-full h-0.5 bg-accent-teal rounded-full"
+                          className="absolute bottom-0 left-0 w-full h-0.5 bg-secondary rounded-full"
                           transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         />
                       )}
@@ -132,14 +132,14 @@ export default function Navbar() {
           {isResumePage ? (
             <Link
               href="/"
-              className="px-5 py-2 rounded-full glass-panel border-card-border hover:border-primary-accent hover:text-primary-accent text-sm font-semibold tracking-wide transition-all"
+              className="px-5 py-2 rounded-full glass-panel border-card-border hover:border-primary hover:text-primary text-sm font-semibold tracking-wide transition-all"
             >
               Back to Home
             </Link>
           ) : (
             <Link
               href="/resume"
-              className="flex items-center gap-1.5 px-5 py-2 rounded-full bg-linear-to-r from-primary-accent to-accent-teal hover:from-primary-accent/80 hover:to-accent-teal/80 text-black font-semibold text-sm tracking-wide transition-all shadow-lg shadow-primary-accent/10"
+              className="flex items-center gap-1.5 px-5 py-2 rounded-full bg-linear-to-r from-primary to-secondary hover:from-primary/80 hover:to-secondary/80 text-black font-semibold text-sm tracking-wide transition-all shadow-lg shadow-primary/10"
             >
               View Resume
               <ArrowUpRight className="w-4 h-4" />
@@ -186,7 +186,7 @@ export default function Navbar() {
                         href={link.href}
                         onClick={(e) => handleLinkClick(e, link.href)}
                         className={`text-xl font-medium tracking-wide block py-2 ${
-                          isActive ? "text-accent-teal" : "text-slate-400 hover:text-white"
+                          isActive ? "text-secondary" : "text-slate-400 hover:text-white"
                         }`}
                       >
                         {link.name}
@@ -200,7 +200,7 @@ export default function Navbar() {
               <Link
                 href="/resume"
                 onClick={() => setIsOpen(false)}
-                className="w-full flex items-center justify-center gap-1.5 py-3 rounded-xl bg-linear-to-r from-primary-accent to-accent-teal text-black font-semibold tracking-wide text-center"
+                className="w-full flex items-center justify-center gap-1.5 py-3 rounded-xl bg-linear-to-r from-primary to-secondary text-black font-semibold tracking-wide text-center"
               >
                 View Resume
                 <ArrowUpRight className="w-4 h-4" />
