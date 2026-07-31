@@ -44,7 +44,7 @@ export const HeroParallax = ({ products }: { products: IProject[] }) => {
   return (
     <div
       ref={containerRef}
-      className="h-[110vh] sm:h-[135vh] min-h-[600px] sm:min-h-[950px] w-full overflow-x-hidden overflow-y-visible relative flex flex-col bg-[#080c14] z-10"
+      className="h-[110vh] sm:h-[135vh] min-h-150 sm:min-h-237.5 w-full overflow-x-hidden overflow-y-visible relative flex flex-col bg-[#080c14] z-10"
     >
       {/* Normal scrolling header (outside sticky, avoids vertical height conflicts) */}
       <Header />
@@ -113,10 +113,10 @@ const ProductCard = ({ product }: { product: IProject }) => {
     <motion.div
       whileHover={{ y: -6 }}
       key={product.title}
-      className="group h-[200px] w-[265px] sm:h-[250px] sm:w-[330px] md:h-[300px] md:w-[400px] shrink-0 relative rounded-2xl overflow-hidden bg-slate-950/65 border border-card-border/80 shadow-2xl transition-all cursor-grab active:cursor-grabbing select-none group-hover:border-primary/50"
+      className="group h-50 w-66.25 sm:h-62.5 sm:w-82.5 md:h-75 md:w-100 shrink-0 relative rounded-2xl overflow-hidden bg-slate-950/65 border border-card-border/80 shadow-2xl transition-all cursor-grab active:cursor-grabbing select-none group-hover:border-primary/50"
     >
       {/* Background vector dot matrix mesh */}
-      <div 
+      <div
         className="absolute inset-0 z-0 pointer-events-none opacity-[0.12] group-hover:opacity-20 transition-opacity"
         style={{
           backgroundImage: `radial-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px)`,
@@ -126,7 +126,7 @@ const ProductCard = ({ product }: { product: IProject }) => {
 
       {/* Holographic Hover Diagonal Light Sweep */}
       <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-        <div className="w-full h-full bg-gradient-to-tr from-transparent via-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+        <div className="w-full h-full bg-linear-to-tr from-transparent via-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
       </div>
 
       {/* Cyber HUD Corner Ticks */}
@@ -144,13 +144,13 @@ const ProductCard = ({ product }: { product: IProject }) => {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
         {/* Glowing radial backdrop */}
         <div className="absolute w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-primary/5 blur-xl group-hover:bg-primary/10 transition-colors" />
-        
+
         {/* Cyber ring container */}
         <div className="absolute w-20 h-20 sm:w-28 sm:h-28 rounded-full border border-dashed border-card-border/40 group-hover:border-primary/20 group-hover:rotate-45 transition-all duration-700 flex items-center justify-center">
-          <img 
-            src={product.imgUrl} 
-            alt="" 
-            className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain opacity-50 group-hover:scale-105 group-hover:opacity-85 transition-all duration-700" 
+          <img
+            src={product.imgUrl}
+            alt=""
+            className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain opacity-100 group-hover:scale-105 group-hover:opacity-85 transition-all duration-700"
           />
         </div>
       </div>
@@ -176,8 +176,7 @@ const ProductCard = ({ product }: { product: IProject }) => {
       </div>
 
       {/* Card Info details bottom panel */}
-      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-gradient-to-t from-slate-950 via-slate-950/95 to-transparent z-10 text-left flex flex-col justify-end min-h-[110px] sm:min-h-[145px]">
-        
+      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-linear-to-t from-slate-950 via-slate-950/95 to-transparent z-10 text-left flex flex-col justify-end min-h-27.5 sm:min-h-36.25">
         {/* Title and Featured Badge */}
         <div className="flex items-center justify-between mb-1 sm:mb-1.5">
           <h2 className="text-sm sm:text-base font-bold font-display text-white tracking-wide truncate pr-2">
@@ -189,17 +188,17 @@ const ProductCard = ({ product }: { product: IProject }) => {
             </span>
           )}
         </div>
-        
+
         {/* Description */}
         <p className="text-[9.5px] sm:text-[11.5px] text-slate-400 font-sans leading-relaxed line-clamp-2 sm:line-clamp-3 mb-2.5">
           {product.description}
         </p>
 
         {/* Tech Stack Badge Grid (Dynamic visual tech stack) */}
-        <div className="flex flex-wrap gap-1 sm:gap-1.5 overflow-hidden max-h-[36px] sm:max-h-[46px]">
+        <div className="flex flex-wrap gap-1 sm:gap-1.5 overflow-hidden max-h-9 sm:max-h-11.5">
           {product.tags.map((tag) => (
-            <span 
-              key={tag} 
+            <span
+              key={tag}
               className="text-[7px] sm:text-[8px] font-mono font-bold px-1.5 py-0.5 rounded bg-slate-900/90 border border-card-border/60 text-secondary group-hover:border-primary/30 transition-colors"
             >
               {tag}
