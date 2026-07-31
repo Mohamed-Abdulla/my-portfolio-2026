@@ -84,7 +84,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "py-4 bg-[#080c14]/80 backdrop-blur-md border-b border-card-border" : "py-6 bg-transparent"
+        scrolled ? "py-4 bg-background/80 backdrop-blur-md border-b border-card-border" : "py-6 bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -108,7 +108,7 @@ export default function Navbar() {
                       href={link.href}
                       onClick={(e) => handleLinkClick(e, link.href)}
                       className={`text-sm font-medium tracking-wide transition-colors relative py-2 ${
-                        isActive ? "text-secondary" : "text-slate-400 hover:text-white"
+                        isActive ? "text-secondary" : "text-slate-600 hover:text-slate-900"
                       }`}
                     >
                       {link.name}
@@ -152,7 +152,7 @@ export default function Navbar() {
           {!isResumePage && (
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-slate-400 hover:text-white transition-colors"
+              className="p-2 text-slate-500 hover:text-slate-900 transition-colors"
               aria-label="Toggle navigation menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -174,7 +174,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden fixed inset-x-0 top-18.25 bottom-0 bg-[#080c14]/95 backdrop-blur-lg border-t border-card-border z-40 flex flex-col justify-between p-8"
+            className="md:hidden fixed inset-x-0 top-18.25 bottom-0 bg-background/95 backdrop-blur-lg border-t border-card-border z-40 flex flex-col justify-between p-8"
           >
             <nav className="flex flex-col gap-6">
               <ul className="flex flex-col gap-5">
@@ -186,7 +186,7 @@ export default function Navbar() {
                         href={link.href}
                         onClick={(e) => handleLinkClick(e, link.href)}
                         className={`text-xl font-medium tracking-wide block py-2 ${
-                          isActive ? "text-secondary" : "text-slate-400 hover:text-white"
+                          isActive ? "text-secondary" : "text-slate-600 hover:text-slate-900"
                         }`}
                       >
                         {link.name}

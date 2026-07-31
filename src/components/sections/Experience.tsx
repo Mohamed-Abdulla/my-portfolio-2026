@@ -10,7 +10,7 @@ export default function Experience() {
   const [activeExp, setActiveExp] = useState<number>(0);
 
   return (
-    <section id="experience" className="py-24 relative bg-[#080c14] border-t border-card-border/30 overflow-hidden">
+    <section id="experience" className="py-24 relative bg-background border-t border-card-border/30 overflow-hidden">
       <div className="glow-spotlight top-1/3 -right-40 bg-accent-teal/10" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -36,7 +36,7 @@ export default function Experience() {
                     onClick={() => setActiveExp(idx)}
                     className={`shrink-0 md:w-full flex flex-col items-start p-5 rounded-2xl glass-panel border transition-all text-left group relative ${
                       isActive
-                        ? "border-primary-accent/40 bg-slate-900/60 shadow-lg shadow-primary-accent/5"
+                        ? "border-primary/45 bg-slate-900 shadow-md shadow-primary/5"
                         : "border-card-border hover:border-slate-700/60"
                     }`}
                   >
@@ -44,19 +44,19 @@ export default function Experience() {
                     {isActive && (
                       <motion.div
                         layoutId="timelineActiveBar"
-                        className="absolute left-0 top-0 md:top-1/4 bottom-0 md:bottom-auto md:w-1.5 md:h-1/2 w-full h-1 bg-linear-to-b from-primary-accent to-accent-teal rounded-r"
+                        className="absolute left-0 top-0 md:top-1/4 bottom-0 md:bottom-auto md:w-1.5 md:h-1/2 w-full h-1 bg-linear-to-b from-primary to-secondary rounded-r"
                       />
                     )}
 
                     <span
                       className={`text-[10px] font-bold uppercase tracking-wider mb-1.5 ${
-                        isActive ? "text-accent-teal" : "text-slate-500"
+                        isActive ? "text-secondary" : "text-slate-500"
                       }`}
                     >
                       {exp.year}
                     </span>
-                    <span className="text-sm sm:text-base font-extrabold text-white group-hover:text-primary-accent transition-colors font-display mb-1 flex items-center gap-1.5">
-                      <Building className="w-4 h-4 text-slate-400" />
+                    <span className="text-sm sm:text-base font-extrabold text-white group-hover:text-primary transition-colors font-display mb-1 flex items-center gap-1.5">
+                      <Building className="w-4 h-4 text-slate-450 shrink-0" />
                       {work.company}
                     </span>
                     <span className="text-xs text-slate-400 font-medium">{work.role}</span>
@@ -84,12 +84,12 @@ export default function Experience() {
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-card-border/60 pb-6 mb-6">
                         <div>
                           <h3 className="text-lg sm:text-xl font-bold font-display text-white mb-1.5">{work.role}</h3>
-                          <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
-                            <Building className="w-4 h-4 text-primary-accent" />
-                            <span className="font-semibold text-slate-300">{work.company}</span>
+                          <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-450">
+                            <Building className="w-4 h-4 text-primary" />
+                            <span className="font-semibold text-slate-350">{work.company}</span>
                           </div>
                         </div>
-                        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 border border-card-border text-[11px] font-semibold text-accent-teal tracking-wide self-start sm:self-auto">
+                        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 border border-card-border text-[11px] font-semibold text-secondary tracking-wide self-start sm:self-auto">
                           <Calendar className="w-3.5 h-3.5" />
                           {work.duration}
                         </div>
@@ -105,7 +105,7 @@ export default function Experience() {
                             key={bIdx}
                             className="flex gap-3 text-slate-300 text-xs sm:text-sm leading-relaxed"
                           >
-                            <CheckCircle2 className="w-5 h-5 text-accent-teal shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                             <span>{bullet}</span>
                           </motion.li>
                         ))}

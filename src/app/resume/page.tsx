@@ -12,26 +12,26 @@ export default function ResumePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#080c14] text-slate-100 py-12 px-4 sm:px-6 print:bg-white print:text-black print:p-0">
+    <div className="min-h-screen bg-background text-foreground py-12 px-4 sm:px-6 print:bg-white print:text-black print:p-0">
       {/* Floating Action Header (Hidden on Print) */}
-      <div className="max-w-4xl mx-auto mb-8 flex items-center justify-between no-print bg-[#0f1626]/80 backdrop-blur-md border border-card-border p-4 rounded-2xl sticky top-4 z-40">
+      <div className="max-w-4xl mx-auto mb-8 flex items-center justify-between no-print bg-card-bg backdrop-blur-md border border-card-border p-4 rounded-2xl sticky top-4 z-40">
         <Link
           href="/"
-          className="flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-wider"
+          className="flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors uppercase tracking-wider"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Home
         </Link>
         <div className="flex gap-2.5">
           <button
             onClick={handlePrint}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-900 border border-card-border hover:border-slate-800 text-slate-400 hover:text-white font-bold text-xs uppercase tracking-wider transition-all"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-card-bg border border-card-border hover:border-slate-400 text-slate-500 hover:text-slate-900 font-bold text-xs uppercase tracking-wider transition-all"
           >
             <Printer className="w-4 h-4" /> Print
           </button>
           <a
             href="/assets/Mohamed-Abdulla-Resume.pdf"
             download="Mohamed-Abdulla-Resume.pdf"
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-primary-accent to-accent-teal hover:opacity-90 text-black font-extrabold text-xs uppercase tracking-wider transition-all"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-linear-to-r from-primary to-secondary hover:opacity-90 text-black font-extrabold text-xs uppercase tracking-wider transition-all"
           >
             <Download className="w-4 h-4" /> Download PDF
           </a>
@@ -39,13 +39,13 @@ export default function ResumePage() {
       </div>
 
       {/* Main Resume Sheet Container */}
-      <div className="max-w-4xl mx-auto bg-[#0f1626] border border-card-border rounded-3xl p-8 sm:p-12 print:border-none print:p-0 print:bg-white print:text-black shadow-2xl print:shadow-none print-container">
+      <div className="max-w-4xl mx-auto bg-card-bg border border-card-border rounded-3xl p-8 sm:p-12 print:border-none print:p-0 print:bg-white print:text-black shadow-2xl print:shadow-none print-container">
         {/* Header Name & Profile Details */}
         <div className="border-b border-card-border/60 pb-8 mb-8 flex flex-col items-start text-left print:border-slate-300">
-          <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-white print:text-black mb-2">
+          <h1 className="text-3xl sm:text-4xl font-extrabold font-display text-foreground print:text-black mb-2">
             {resumeInfo.name}
           </h1>
-          <h2 className="text-lg font-bold font-display text-primary-accent mb-4">{resumeInfo.title}</h2>
+          <h2 className="text-lg font-bold font-display text-primary mb-4">{resumeInfo.title}</h2>
 
           {/* Quick contact rows */}
           <div className="flex flex-wrap gap-x-6 gap-y-2.5 text-xs sm:text-sm text-slate-300 print:text-slate-700">

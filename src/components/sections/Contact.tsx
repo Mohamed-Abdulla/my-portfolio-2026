@@ -6,7 +6,7 @@ import ContactTerminal from "../widgets/ContactTerminal";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 relative bg-[#080c14] border-t border-card-border/30 overflow-hidden">
+    <section id="contact" className="py-24 relative bg-background border-t border-card-border/30 overflow-hidden">
       {/* Background neon visual glow */}
       <div className="glow-spotlight bottom-0 right-0 bg-primary-accent/10" />
 
@@ -22,8 +22,8 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto items-start">
           {/* Left Side: Contact details */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <h3 className="text-xl font-bold font-display text-white mb-2 text-left">Contact Information</h3>
-            <p className="text-sm font-sans text-slate-400 leading-relaxed text-left mb-4">
+            <h3 className="text-xl font-bold font-display text-foreground mb-2 text-left">Contact Information</h3>
+            <p className="text-sm font-sans text-slate-600 leading-relaxed text-left mb-4">
               Feel free to reach out for project consultations, system architecture advice, full-stack development
               roles, or just general chats.
             </p>
@@ -31,9 +31,9 @@ export default function Contact() {
             {/* Email Card */}
             <a
               href="mailto:mohamedabdulla.web@gmail.com"
-              className="flex items-center gap-4 p-5 rounded-2xl glass-panel border border-card-border hover:border-primary-accent/40 hover:bg-slate-900/40 transition-all text-left group"
+              className="flex items-center gap-4 p-5 rounded-2xl glass-panel border border-card-border hover:border-primary/40 hover:bg-slate-900/40 transition-all text-left group"
             >
-              <div className="p-3 rounded-xl bg-slate-900 border border-card-border text-primary-accent group-hover:border-primary-accent/40 transition-colors">
+              <div className="p-3 rounded-xl bg-slate-900 border border-card-border text-primary group-hover:border-primary/40 transition-colors">
                 <Mail className="w-5 h-5" />
               </div>
               <div>
@@ -45,9 +45,9 @@ export default function Contact() {
             {/* Phone Card */}
             <a
               href="tel:+916382344165"
-              className="flex items-center gap-4 p-5 rounded-2xl glass-panel border border-card-border hover:border-accent-teal/40 hover:bg-slate-900/40 transition-all text-left group"
+              className="flex items-center gap-4 p-5 rounded-2xl glass-panel border border-card-border hover:border-secondary/40 hover:bg-slate-900/40 transition-all text-left group"
             >
-              <div className="p-3 rounded-xl bg-slate-900 border border-card-border text-accent-teal group-hover:border-accent-teal/40 transition-colors">
+              <div className="p-3 rounded-xl bg-slate-900 border border-card-border text-secondary group-hover:border-secondary/40 transition-colors">
                 <Phone className="w-5 h-5" />
               </div>
               <div>

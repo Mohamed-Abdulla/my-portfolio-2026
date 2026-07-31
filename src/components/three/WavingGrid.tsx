@@ -133,7 +133,7 @@ export default function WavingGrid() {
       </Canvas>
 
       {/* Soft gradient bottom fog overlay to fade the grid out */}
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-[#080c14] to-transparent pointer-events-none z-1" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-background to-transparent pointer-events-none z-1" />
     </div>
   );
 }

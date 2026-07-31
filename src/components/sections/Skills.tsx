@@ -79,7 +79,7 @@ const skillCategories: SkillCategory[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 relative bg-[#080c14] border-t border-card-border/30 overflow-hidden">
+    <section id="skills" className="py-24 relative bg-background border-t border-card-border/30 overflow-hidden">
       {/* Dynamic glow spotlights */}
       <div className="glow-spotlight -top-40 right-1/4 bg-primary/10" />
       <div className="glow-spotlight top-1/2 left-10 bg-secondary/5" />
@@ -105,19 +105,19 @@ export default function Skills() {
 
               {/* Category Legend */}
               <div className="mt-6 flex flex-wrap justify-center gap-4 max-w-sm font-mono text-[9px] sm:text-[10px]">
-                <div className="flex items-center gap-1.5 text-slate-400">
+                <div className="flex items-center gap-1.5 text-slate-600">
                   <span className="w-2 h-2 rounded-full bg-[#60a5fa] block" />
                   Frontend / Dart
                 </div>
-                <div className="flex items-center gap-1.5 text-slate-400">
+                <div className="flex items-center gap-1.5 text-slate-600">
                   <span className="w-2 h-2 rounded-full bg-[#c084fc] block" />
                   Backend APIs
                 </div>
-                <div className="flex items-center gap-1.5 text-slate-400">
+                <div className="flex items-center gap-1.5 text-slate-600">
                   <span className="w-2 h-2 rounded-full bg-[#f43f5e] block" />
                   DevOps / Infra
                 </div>
-                <div className="flex items-center gap-1.5 text-slate-400">
+                <div className="flex items-center gap-1.5 text-slate-600">
                   <span className="w-2 h-2 rounded-full bg-[#34d399] block" />
                   Databases
                 </div>
@@ -149,7 +149,7 @@ export default function Skills() {
               <Terminal className="w-4 h-4 text-primary animate-pulse" />
               <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest">OBSERVABILITY_MATRIX</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold font-display text-white">
+            <h3 className="text-2xl sm:text-3xl font-bold font-display text-foreground">
               Systems Core Stack Telemetry
             </h3>
           </div>
@@ -158,7 +158,7 @@ export default function Skills() {
             {skillCategories.map((category) => (
               <div
                 key={category.title}
-                className="rounded-2xl border border-card-border/60 bg-[#090f1d]/35 p-6 hover:border-primary/40 hover:bg-[#090f1d]/50 transition-all duration-300 relative group overflow-hidden"
+                className="rounded-2xl border border-card-border/60 bg-card-bg p-6 hover:border-primary/40 transition-all duration-300 relative group overflow-hidden hover:shadow-lg hover:shadow-primary/5"
               >
                 {/* Cyber Corner Ticks */}
                 <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-primary/20 group-hover:border-primary transition-colors rounded-tl-xs" />

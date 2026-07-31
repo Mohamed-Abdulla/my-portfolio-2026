@@ -34,7 +34,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="py-24 relative bg-[#080c14] border-t border-card-border/30 overflow-hidden">
+    <section id="about" className="py-24 relative bg-background border-t border-card-border/30 overflow-hidden">
       <div className="glow-spotlight top-1/4 left-1/4 bg-primary-accent/5 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

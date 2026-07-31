@@ -28,7 +28,7 @@ export const CardSpotlight = ({
     <div
       onMouseMove={handleMouseMove}
       className={cn(
-        "relative rounded-3xl p-6 sm:p-8 bg-[#090f1d]/45 border border-card-border/60 hover:border-slate-800 transition-colors duration-300 overflow-hidden group/spotlight w-full h-full flex flex-col justify-between",
+        "relative rounded-3xl p-6 sm:p-8 bg-card-bg border border-card-border/60 hover:border-primary/30 transition-colors duration-300 overflow-hidden group/spotlight w-full h-full flex flex-col justify-between",
         className
       )}
     >
@@ -36,7 +36,7 @@ export const CardSpotlight = ({
       <div 
         className="absolute inset-0 z-0 pointer-events-none opacity-30 group-hover/spotlight:opacity-50 transition-opacity duration-300"
         style={{
-          backgroundImage: `radial-gradient(rgba(30, 41, 59, 0.6) 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)`,
           backgroundSize: "14px 14px",
         }}
       />

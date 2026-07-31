@@ -45,10 +45,10 @@ export const BentoGridItem = ({
         {header}
         
         <div className="group-hover/spotlight:translate-x-1.5 transition duration-300 ease-out text-left relative z-10 mt-auto">
-          <div className="p-2 rounded-xl bg-slate-900/60 border border-card-border w-fit mb-4 text-slate-300 group-hover/spotlight:border-accent-teal/40 transition-colors">
+          <div className="p-2 rounded-xl bg-slate-900/60 border border-card-border w-fit mb-4 text-slate-350 group-hover/spotlight:border-secondary/40 transition-colors">
             {icon}
           </div>
-          <div className="font-display font-bold text-white text-lg sm:text-xl mb-2 mt-2 group-hover/spotlight:text-accent-teal transition-colors font-semibold">
+          <div className="font-display font-bold text-white text-lg sm:text-xl mb-2 mt-2 group-hover/spotlight:text-secondary transition-colors">
             {title}
           </div>
           <div className="font-sans font-normal text-slate-400 text-xs sm:text-sm leading-relaxed">

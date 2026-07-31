@@ -35,7 +35,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-[#080c14]"
+      className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-background"
     >
       {/* 3D WebGL Waving Wireframe Grid Backdrop (Killer interactive feature) */}
       <WavingGrid />
@@ -75,7 +75,7 @@ export default function Hero() {
 
           <motion.h2
             variants={itemVariants}
-            className="text-lg sm:text-xl font-semibold text-slate-300 font-display mb-6 flex flex-wrap items-center gap-x-1.5 gap-y-1"
+            className="text-lg sm:text-xl font-semibold text-slate-700 font-display mb-6 flex flex-wrap items-center gap-x-1.5 gap-y-1"
           >
             <Briefcase className="w-5 h-5 text-primary shrink-0" />
             <span>Building</span>
@@ -86,7 +86,7 @@ export default function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="text-slate-400 font-sans max-w-xl text-base sm:text-lg mb-8 leading-relaxed"
+            className="text-slate-600 font-sans max-w-xl text-base sm:text-lg mb-8 leading-relaxed"
           >
             Specializing in high-performance distributed systems, event-driven backends (Kafka/RabbitMQ), and custom
             identity systems (Keycloak/Kong). I also design and ship production mobile platforms in Flutter and web
@@ -103,7 +103,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/resume"
-              className="flex items-center gap-2 px-6 py-3.5 rounded-xl glass-panel border-card-border hover:border-secondary/50 hover:bg-slate-900/50 text-slate-200 font-bold text-sm tracking-wide transition-all w-full sm:w-auto justify-center"
+              className="flex items-center gap-2 px-6 py-3.5 rounded-xl glass-panel border-card-border hover:border-secondary/50 hover:bg-slate-100/55 text-slate-800 font-bold text-sm tracking-wide transition-all w-full sm:w-auto justify-center"
             >
               View Resume <FileText className="w-4 h-4" />
             </Link>
@@ -115,7 +115,7 @@ export default function Hero() {
               href="https://github.com/Mohamed-Abdulla"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-xl glass-panel border-card-border hover:border-primary hover:text-primary transition-all text-slate-400"
+              className="p-3 rounded-xl glass-panel border-card-border hover:border-primary hover:text-primary transition-all text-slate-600"
               aria-label="GitHub Profile"
             >
               <FaGithub className="w-5 h-5" />
@@ -124,7 +124,7 @@ export default function Hero() {
               href="https://www.linkedin.com/in/mohamed-abdulla-a4084922a/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-xl glass-panel border-card-border hover:border-primary hover:text-primary transition-all text-slate-400"
+              className="p-3 rounded-xl glass-panel border-card-border hover:border-primary hover:text-primary transition-all text-slate-600"
               aria-label="LinkedIn Profile"
             >
               <FaLinkedin className="w-5 h-5" />
