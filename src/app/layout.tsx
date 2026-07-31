@@ -24,29 +24,72 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mohamed Abdulla | Full Stack Software Engineer",
-  description: "Portfolio of Mohamed Abdulla, Full Stack Software Engineer specializing in production-grade distributed systems, event-driven services (Kafka/RabbitMQ), custom identity (Keycloak/Kong), and Flutter mobile apps.",
+  metadataBase: new URL("https://mohamedabdulla.vercel.app"),
+  title: {
+    default: "Mohamed Abdulla | Full Stack & Systems Architect",
+    template: "%s | Mohamed Abdulla",
+  },
+  description:
+    "Portfolio of Mohamed Abdulla, Full Stack Software Engineer specializing in production-grade distributed systems, event-driven services (Kafka/RabbitMQ), custom identity (Keycloak/Kong), and Flutter mobile apps.",
   icons: {
     icon: "/assets/abd-hoodie.jpeg",
+    shortcut: "/assets/abd-hoodie.jpeg",
+    apple: "/assets/abd-hoodie.jpeg",
   },
   keywords: [
     "Mohamed Abdulla",
     "Full Stack Software Engineer",
+    "Systems Architect",
     "Distributed Systems",
-    "Kafka Developer",
+    "Kafka Event-Driven",
     "FastAPI",
     "NestJS",
     "Flutter Mobile Engineer",
     "Docker Swarm",
     "Keycloak IAM",
+    "Kong Gateway",
     "Next.js Developer",
+    "DevOps Engineer",
   ],
-  authors: [{ name: "Mohamed Abdulla" }],
+  authors: [{ name: "Mohamed Abdulla", url: "https://github.com/Mohamed-Abdulla" }],
+  creator: "Mohamed Abdulla",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Mohamed Abdulla | Full Stack Software Engineer",
-    description: "Production-grade distributed systems, event-driven architectures, and mobile applications.",
+    title: "Mohamed Abdulla | Full Stack & Systems Architect",
+    description:
+      "Production-grade distributed systems, event-driven architectures, and high-performance mobile applications.",
+    url: "https://mohamed-abdulla.dev",
+    siteName: "Mohamed Abdulla Portfolio",
+    images: [
+      {
+        url: "/assets/abd-hoodie.jpeg",
+        width: 600,
+        height: 600,
+        alt: "Mohamed Abdulla Profile Image",
+      },
+    ],
     type: "website",
     locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mohamed Abdulla | Full Stack & Systems Architect",
+    description:
+      "Production-grade distributed systems, event-driven architectures, and high-performance mobile applications.",
+    images: ["/assets/abd-hoodie.jpeg"],
   },
 };
 
