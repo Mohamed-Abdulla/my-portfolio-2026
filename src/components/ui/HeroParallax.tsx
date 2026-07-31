@@ -113,14 +113,14 @@ const ProductCard = ({ product }: { product: IProject }) => {
     <motion.div
       whileHover={{ y: -5 }}
       key={product.title}
-      className="group h-[150px] w-[205px] sm:h-[195px] sm:w-[260px] md:h-[215px] md:w-[290px] shrink-0 relative rounded-2xl overflow-hidden glass-panel border border-card-border shadow-2xl transition-all cursor-grab active:cursor-grabbing select-none"
+      className="group h-[180px] w-[240px] sm:h-[230px] sm:w-[310px] md:h-[265px] md:w-[350px] shrink-0 relative rounded-2xl overflow-hidden glass-panel border border-card-border shadow-2xl transition-all cursor-grab active:cursor-grabbing select-none"
     >
       {/* Background radial gradient */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-primary-accent/5 to-accent-teal/5 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-secondary/5 z-0" />
 
       {/* Project Mock Icon in background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10 group-hover:scale-105 group-hover:opacity-20 transition-all duration-700 z-0">
-        <img src={product.imgUrl} alt="" className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain" />
+        <img src={product.imgUrl} alt="" className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 object-contain" />
       </div>
 
       {/* Tags overlay (Hidden on extra small mobile screens for visual spacing) */}
@@ -128,7 +128,7 @@ const ProductCard = ({ product }: { product: IProject }) => {
         {product.tags.slice(0, 2).map((tag) => (
           <span
             key={tag}
-            className="text-[7px] sm:text-[7.5px] font-mono font-bold px-1.5 py-0.5 rounded-full bg-slate-950/85 border border-card-border/60 text-accent-teal"
+            className="text-[7.5px] sm:text-[8px] font-mono font-bold px-1.5 py-0.5 rounded-full bg-slate-950/85 border border-card-border/60 text-secondary"
           >
             {tag}
           </span>
@@ -141,7 +141,7 @@ const ProductCard = ({ product }: { product: IProject }) => {
           href={product.projectLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 sm:p-2.5 rounded-full bg-gradient-to-r from-primary-accent to-accent-teal text-black hover:scale-110 transition-transform shadow-lg shadow-accent-teal/20"
+          className="p-2 sm:p-2.5 rounded-full bg-gradient-to-r from-primary to-secondary text-black hover:scale-110 transition-transform shadow-lg shadow-secondary/20"
         >
           <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
         </a>
@@ -156,18 +156,18 @@ const ProductCard = ({ product }: { product: IProject }) => {
       </div>
 
       {/* Card Info details */}
-      <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4.5 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent z-10 text-left flex flex-col justify-end min-h-[85px] sm:min-h-[105px]">
-        <div className="flex items-center justify-between mb-1">
-          <h2 className="text-xs sm:text-sm font-bold font-display text-white tracking-wide truncate pr-2">
+      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent z-10 text-left flex flex-col justify-end min-h-[95px] sm:min-h-[120px]">
+        <div className="flex items-center justify-between mb-1.5">
+          <h2 className="text-xs sm:text-base font-bold font-display text-white tracking-wide truncate pr-2">
             {product.title}
           </h2>
           {product.featured && (
-            <span className="text-[6.5px] sm:text-[7px] font-bold uppercase tracking-wider text-accent-teal px-1.5 py-0.5 rounded bg-accent-teal/10 border border-accent-teal/20 shrink-0">
+            <span className="text-[6.5px] sm:text-[7.5px] font-bold uppercase tracking-wider text-secondary px-1.5 py-0.5 rounded bg-secondary/10 border border-secondary/20 shrink-0">
               Ftrd
             </span>
           )}
         </div>
-        <p className="text-[9px] sm:text-[11px] text-slate-400 font-sans leading-relaxed line-clamp-3 hidden sm:block">
+        <p className="text-[9.5px] sm:text-[11.5px] text-slate-400 font-sans leading-relaxed line-clamp-3 hidden sm:block">
           {product.description}
         </p>
       </div>
