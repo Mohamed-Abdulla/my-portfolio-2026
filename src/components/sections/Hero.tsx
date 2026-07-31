@@ -86,7 +86,7 @@ export default function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="text-slate-400 font-sans max-w-xl text-base sm:text-lg mb-8 leading-relaxed"
+            className="text-slate-400 font-sans max-w-xl text-base sm:text-md mb-8 leading-relaxed"
           >
             Specializing in high-performance distributed systems, event-driven backends (Kafka/RabbitMQ), and custom
             identity systems (Keycloak/Kong). I also design and ship production mobile platforms in Flutter and web
