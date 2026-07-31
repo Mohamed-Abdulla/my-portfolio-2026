@@ -111,65 +111,101 @@ const Header = () => {
 const ProductCard = ({ product }: { product: IProject }) => {
   return (
     <motion.div
-      whileHover={{ y: -5 }}
+      whileHover={{ y: -6 }}
       key={product.title}
-      className="group h-[200px] w-[265px] sm:h-[250px] sm:w-[330px] md:h-[300px] md:w-[400px] shrink-0 relative rounded-2xl overflow-hidden glass-panel border border-card-border shadow-2xl transition-all cursor-grab active:cursor-grabbing select-none"
+      className="group h-[200px] w-[265px] sm:h-[250px] sm:w-[330px] md:h-[300px] md:w-[400px] shrink-0 relative rounded-2xl overflow-hidden bg-slate-950/65 border border-card-border/80 shadow-2xl transition-all cursor-grab active:cursor-grabbing select-none group-hover:border-primary/50"
     >
-      {/* Background radial gradient */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-secondary/5 z-0" />
+      {/* Background vector dot matrix mesh */}
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none opacity-[0.12] group-hover:opacity-20 transition-opacity"
+        style={{
+          backgroundImage: `radial-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px)`,
+          backgroundSize: "12px 12px",
+        }}
+      />
 
-      {/* Project Mock Icon in background */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10 group-hover:scale-105 group-hover:opacity-20 transition-all duration-700 z-0">
-        <img src={product.imgUrl} alt="" className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 object-contain" />
+      {/* Holographic Hover Diagonal Light Sweep */}
+      <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+        <div className="w-full h-full bg-gradient-to-tr from-transparent via-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
       </div>
 
-      {/* Tags overlay (Hidden on extra small mobile screens for visual spacing) */}
-      <div className="absolute top-2.5 left-2.5 z-25 flex flex-wrap gap-1">
-        {product.tags.slice(0, 2).map((tag) => (
-          <span
-            key={tag}
-            className="text-[7.5px] sm:text-[8px] font-mono font-bold px-1.5 py-0.5 rounded-full bg-slate-950/85 border border-card-border/60 text-secondary"
-          >
-            {tag}
-          </span>
-        ))}
+      {/* Cyber HUD Corner Ticks */}
+      <div className="absolute top-2.5 left-2.5 w-3.5 h-3.5 border-t border-l border-primary/40 group-hover:border-primary transition-colors rounded-tl-sm z-20" />
+      <div className="absolute top-2.5 right-2.5 w-3.5 h-3.5 border-t border-r border-primary/40 group-hover:border-primary transition-colors rounded-tr-sm z-20" />
+      <div className="absolute bottom-2.5 left-2.5 w-3.5 h-3.5 border-b border-l border-primary/40 group-hover:border-primary transition-colors rounded-bl-sm z-20" />
+      <div className="absolute bottom-2.5 right-2.5 w-3.5 h-3.5 border-b border-r border-primary/40 group-hover:border-primary transition-colors rounded-br-sm z-20" />
+
+      {/* Telemetry Index Badge */}
+      <div className="absolute top-3.5 left-8 z-20 text-[6.5px] sm:text-[7.5px] font-mono text-slate-500 uppercase tracking-widest">
+        PROJ_IO // SECURE
       </div>
 
-      {/* Interactive Hover Actions overlay */}
-      <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition-all duration-300 z-30">
+      {/* Project Brand Icon centered in background with rotating cyber circle */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+        {/* Glowing radial backdrop */}
+        <div className="absolute w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-primary/5 blur-xl group-hover:bg-primary/10 transition-colors" />
+        
+        {/* Cyber ring container */}
+        <div className="absolute w-20 h-20 sm:w-28 sm:h-28 rounded-full border border-dashed border-card-border/40 group-hover:border-primary/20 group-hover:rotate-45 transition-all duration-700 flex items-center justify-center">
+          <img 
+            src={product.imgUrl} 
+            alt="" 
+            className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain opacity-50 group-hover:scale-105 group-hover:opacity-85 transition-all duration-700" 
+          />
+        </div>
+      </div>
+
+      {/* Interactive Actions Overlay (triggers on group hover) */}
+      <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-xs opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition-all duration-300 z-30">
         <a
           href={product.projectLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 sm:p-2.5 rounded-full bg-gradient-to-r from-primary to-secondary text-black hover:scale-110 transition-transform shadow-lg shadow-secondary/20"
+          className="p-2.5 sm:p-3 rounded-full bg-linear-to-r from-primary to-secondary text-black hover:scale-110 transition-transform shadow-lg shadow-secondary/20 cursor-pointer"
         >
-          <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+          <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
         </a>
         <a
           href={product.codeLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 sm:p-2.5 rounded-full glass-panel border-card-border hover:border-white text-white hover:scale-110 transition-transform"
+          className="p-2.5 sm:p-3 rounded-full glass-panel border-card-border hover:border-white text-white hover:scale-110 transition-transform cursor-pointer"
         >
-          <FaGithub className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+          <FaGithub className="w-4 h-4 sm:w-5 sm:h-5" />
         </a>
       </div>
 
-      {/* Card Info details */}
-      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent z-10 text-left flex flex-col justify-end min-h-[95px] sm:min-h-[120px]">
-        <div className="flex items-center justify-between mb-1.5">
-          <h2 className="text-xs sm:text-base font-bold font-display text-white tracking-wide truncate pr-2">
+      {/* Card Info details bottom panel */}
+      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 bg-gradient-to-t from-slate-950 via-slate-950/95 to-transparent z-10 text-left flex flex-col justify-end min-h-[110px] sm:min-h-[145px]">
+        
+        {/* Title and Featured Badge */}
+        <div className="flex items-center justify-between mb-1 sm:mb-1.5">
+          <h2 className="text-sm sm:text-base font-bold font-display text-white tracking-wide truncate pr-2">
             {product.title}
           </h2>
           {product.featured && (
             <span className="text-[6.5px] sm:text-[7.5px] font-bold uppercase tracking-wider text-secondary px-1.5 py-0.5 rounded bg-secondary/10 border border-secondary/20 shrink-0">
-              Ftrd
+              Featured
             </span>
           )}
         </div>
-        <p className="text-[9.5px] sm:text-[11.5px] text-slate-400 font-sans leading-relaxed line-clamp-3 hidden sm:block">
+        
+        {/* Description */}
+        <p className="text-[9.5px] sm:text-[11.5px] text-slate-400 font-sans leading-relaxed line-clamp-2 sm:line-clamp-3 mb-2.5">
           {product.description}
         </p>
+
+        {/* Tech Stack Badge Grid (Dynamic visual tech stack) */}
+        <div className="flex flex-wrap gap-1 sm:gap-1.5 overflow-hidden max-h-[36px] sm:max-h-[46px]">
+          {product.tags.map((tag) => (
+            <span 
+              key={tag} 
+              className="text-[7px] sm:text-[8px] font-mono font-bold px-1.5 py-0.5 rounded bg-slate-900/90 border border-card-border/60 text-secondary group-hover:border-primary/30 transition-colors"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
