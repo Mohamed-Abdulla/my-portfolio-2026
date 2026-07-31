@@ -85,7 +85,6 @@ export default function Skills() {
       <div className="glow-spotlight top-1/2 left-10 bg-secondary/5" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        
         {/* 3D Tilt Container Scroll wrapper */}
         <ContainerScroll
           titleComponent={
@@ -132,7 +131,9 @@ export default function Skills() {
                   Distributed Systems Expertise
                 </h3>
                 <p className="text-xs sm:text-sm font-sans text-slate-400 leading-relaxed">
-                  Observability, reliability, and security are core priorities for modern distributed architectures. Interact with the terminal below to review mock docker statuses, Kafka queues, Keycloak handshakes, and event streams.
+                  Observability, reliability, and security are core priorities for modern distributed architectures.
+                  Interact with the terminal below to review mock docker statuses, Kafka queues, Keycloak handshakes,
+                  and event streams.
                 </p>
               </div>
 
@@ -143,15 +144,14 @@ export default function Skills() {
 
         {/* Systems Core Stack Observability Grid (New Killer visual component) */}
         <div className="mt-28 max-w-6xl mx-auto w-full relative z-10">
-          
           <div className="text-left mb-12 border-b border-card-border/40 pb-5">
             <div className="flex items-center gap-2 text-primary mb-1">
               <Terminal className="w-4 h-4 text-primary animate-pulse" />
-              <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest">OBSERVABILITY_MATRIX</span>
+              <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest">
+                OBSERVABILITY_MATRIX
+              </span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold font-display text-white">
-              Systems Core Stack Telemetry
-            </h3>
+            <h3 className="text-2xl sm:text-3xl font-bold font-display text-white">Systems Core Stack Telemetry</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
@@ -181,18 +181,21 @@ export default function Skills() {
                 {/* Skill List items */}
                 <div className="space-y-4 text-left">
                   {category.skills.map((skill) => (
-                    <div key={skill.name} className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-4">
+                    <div
+                      key={skill.name}
+                      className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-4"
+                    >
                       <span className="text-xs sm:text-sm text-slate-300 font-semibold group-hover:text-white transition-colors">
                         {skill.name}
                       </span>
-                      
+
                       {/* Telemetry Meter Bar representation */}
                       <div className="flex items-center gap-2">
-                        <div className="flex gap-[3px]">
+                        <div className="flex gap-0.75">
                           {Array.from({ length: 10 }).map((_, i) => (
                             <div
                               key={i}
-                              className={`w-[7px] h-3 rounded-xs border transition-all duration-500 ${
+                              className={`w-1.75 h-3 rounded-xs border transition-all duration-500 ${
                                 i < skill.level
                                   ? "bg-secondary/20 border-secondary group-hover:bg-secondary/40 group-hover:shadow-[0_0_8px_rgba(6,182,212,0.3)]"
                                   : "bg-slate-950/40 border-card-border/40"
@@ -200,7 +203,7 @@ export default function Skills() {
                             />
                           ))}
                         </div>
-                        <span className="text-[9px] sm:text-[10px] font-mono font-bold text-slate-500 w-[24px] text-right shrink-0">
+                        <span className="text-[9px] sm:text-[10px] font-mono font-bold text-slate-500 w-6 text-right shrink-0">
                           {skill.level * 10}%
                         </span>
                       </div>
@@ -210,9 +213,7 @@ export default function Skills() {
               </div>
             ))}
           </div>
-
         </div>
-
       </div>
     </section>
   );
