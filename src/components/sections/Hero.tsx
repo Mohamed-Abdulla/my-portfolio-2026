@@ -139,7 +139,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, type: "spring" }}
-            className="relative w-72 h-72 sm:w-[380px] sm:h-[380px] rounded-3xl flex items-center justify-center bg-slate-950/70 border border-card-border p-4.5 sm:p-6 shadow-2xl overflow-hidden"
+            className="relative w-72 h-72 sm:w-95 sm:h-95 rounded-3xl flex items-center justify-center bg-slate-950/70 border border-card-border p-4.5 sm:p-6 shadow-2xl overflow-hidden"
           >
             {/* HUD Corner Ticks */}
             <div className="absolute top-3 left-3 w-5 h-5 border-t border-l border-primary rounded-tl" />
@@ -158,7 +158,7 @@ export default function Hero() {
             <div className="absolute top-4 left-6 text-[8px] sm:text-[9px] text-slate-500 font-mono uppercase tracking-widest hidden xs:block">
               SYSTEM // ARCH_v2.0
             </div>
-            <div className="absolute top-4 right-6 text-[8px] sm:text-[9px] text-secondary font-mono tracking-widest flex items-center gap-1.5 hidden xs:block">
+            <div className="absolute top-4 right-6 text-[8px] sm:text-[9px] text-secondary font-mono tracking-widest  items-center gap-1.5 hidden xs:block">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-secondary"></span>
